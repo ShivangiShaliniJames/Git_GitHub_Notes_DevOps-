@@ -1,0 +1,43 @@
+To understand how Git tracks your files, it helps to think of Git as a three-tier architecture with a fourth permanent storage step. Your files move through these distinct sections
+or "stages" as you write code and save snapshots.
+
+The 4 Stages of Git:
+
+ [ 1. Working Directory ]  -->  [ 2. Staging Area ]  -->  [ 3. Local Repo ]  -->  [ 4. Remote Repo ]
+   (Edits/Untracked)             (git add)                  (git commit)             (git push)
+
+1. Working Directory (Untracked / Modified)
+   A. What it is: The actual folder on your computer where you create, delete, and edit files.
+   B. Git's Status: Git sees that changes exist here, but they are not safely saved in your history yet.
+
+2. Staging Area (Index)
+   A. What it is: A digital "loading dock" or a rough draft of your next snapshot.
+   B. Git's Status: You choose exactly which changes from your working directory you want to include in your next save.
+
+3. Local Repository (Committed)
+   A. What it is: Your permanent, local "time machine" history database stored inside the hidden .git folder.
+   B. Git's Status: The changes are safely snapshotted on your computer with a unique ID and a commit message.
+
+4. Remote Repository (Pushed)
+   A. What it is: A copy of your project history hosted on the cloud (like GitHub or GitLab).
+   B. Git's Status: Your local snapshots are uploaded online for safekeeping and collaboration.
+
+The Commands That Move Files Between Stages
+
+git status (The Inspector)
+ A. Does not move files.
+ B. Checks your project and tells you exactly which stage your files are currently sitting in.
+ C. Color cue: Untracked/modified files usually show up in red, while staged files show up in green.
+
+git add <file> (Move to Staging)
+ A. Moves a file from the Working Directory into the Staging Area.
+ B. Use git add . to stage all changed files at once.
+
+git commit -m "message" (Move to Local Repo)
+ A. Packages everything currently sitting in the Staging Area and saves it permanently to the Local Repository.
+ B. Clears out the staging area so it is empty for your next batch of work.
+
+git push (Move to Remote Repo)
+ A. Uploads all your locally Committed changes up to the Remote Repository.
+
+Note: If a file is just added but not committed, and later deleted, it cannot be restored. Only if a file is committed (tracked), it can be restored if deleted by mistake.
