@@ -1,0 +1,68 @@
+Git is a tool that allows you to Version Control your file system. 
+
+What is a Version Control System?
+A Version Control System (VCS) is a software tool that tracks and manages modifications to source code and files over time. It acts like a smart project time machine, saving precise
+snapshots of your work so that you can review modifications, revert to earlier versions, and collaborate without overwriting anyone else's code.
+
+Core Benefits of Version Control
+Complete Revision History: Records exactly who made a change, what lines were altered, when it happened, and why.
+Safe Experimentation: Features like branching let you duplicate the main code to test new features or fix bugs independently.
+Conflict Resolution: Allows multiple developers to work on the same file simultaneously and provides structured tools to safely merge their updates.
+Disaster Recovery: Serves as a secure backup system so you can instantly roll back an entire project if a catastrophic error occurs.
+
+Centralized vs. Distributed Systems
+Version control systems generally fall into two architectural categories:
+
+Feature                  Centralized VCS (CVCS)                                                      Distributed VCS (DVCS)
+How it Works             Files are stored on a single central server.                               Every user clones a full copy of the entire project history onto their local machine. 
+                         Users check out individual files to work on them.
+Offline Capability       Highly limited; requires an active internet connection                     Fully operational offline; you can commit changes and view full history anywhere.
+                         to save history or commit updates.
+Resilience               Has a single point of failure; if the server crashes,                      Highly resilient; every local copy acts as a complete backup of the repository.
+                         collaboration stops and data risks loss.
+Popular Examples         Apache Subversion (SVN) and Perforce Helix Core.                           Git and Mercurial.
+
+How to install Git?
+To install Git, you need to download the installer or run a specific terminal command depending on your operating system.
+
+macOS Installation
+1. Using Homebrew (Recommended): Open your Terminal and run:
+   brew install git
+2. Using Xcode Tools: Open your Terminal and type:
+   git --version
+
+Linux Installation
+Open your terminal and run the command that matches your Linux distribution:
+sudo apt update
+sudo apt install git
+
+Next Step: First-Time SetupOnce installed, you must introduce yourself to Git so your future code changes are properly credited to you. Run these two commands in your terminal:
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+Initializing Git
+To initialize a brand-new Git repository on your computer, you need to open your terminal (or Git Bash on Windows) and run a single core command inside your project folder.
+
+Step-by-Step Initialization
+1. Navigate to your project folder: Use the cd command to move into the directory where your project files are located (or where you want to create them).
+cd path/to/your/project-folder
+
+2. Initialize the repository: Run the initialization command. This creates a hidden .git folder that tracks your project history.
+git init
+
+3. Set the default branch name (Highly Recommended): Modern development uses main as the default branch name instead of the older default master. Set it by running:
+git branch -M main
+
+Saving Your First Files
+After initialization, Git is watching your folder, but it is not tracking any files yet. To save your first snapshot, run these three commands in order:
+
+Check the project status: See which files Git notices but isn't tracking yet.
+git status
+
+Stage your files: Tell Git to prepare all files (.) in the folder for a snapshot.
+git add .
+
+Commit your changes: Save the snapshot permanently to your local history with a descriptive message.
+git commit -m "Initial commit"
+
+
