@@ -1,0 +1,10 @@
+GitHub is a cloud-based hosting service that lets you store, manage, and share your local Git repositories online. While Git is the command-line tool that tracks your code history on
+your computer, GitHub acts as the centralized hub where teams upload their Git history to collaborate on projects.
+
+The Key Differences Between 
+
+ Feature                                 Git                                             GitHub
+What it is                          A local version control software application.        A web-based cloud platform that hosts Git repositories.
+Interface                           Command Line Interface (CLI) / Terminal.             Graphical User Interface (GUI) via a website or desktop app.
+Where it lives                      Installed locally on your computer.                  Hosted remotely on servers managed by Microsoft.
+Core Function                       Tracks file changes and creates local snapshots.     Facilitates collaboration, code review, and project management.
