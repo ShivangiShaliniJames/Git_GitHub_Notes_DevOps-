@@ -1,0 +1,11 @@
+Once you create a free account on GitHub, you can link your local project to a new GitHub repository using these standard commands:
+
+1. Create a blank repository on the GitHub website (do not add a README or .gitignore yet if your local folder already has code).
+2. Copy the remote URL provided by GitHub (e.g., https://github.com).
+3. Link your local project to that URL:
+
+git remote add origin https://github.com
+
+4. Push your code online for the first time:
+
+git push -u origin main
